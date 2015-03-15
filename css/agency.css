@@ -45,10 +45,13 @@ a.active {
     color: #fec503;
 }
 
+h4{
+    font-family: Open Sans;
+    font-weight: 700;
+}
 h1,
 h2,
 h3,
-h4,
 h5,
 h6 {
     text-transform: uppercase;
@@ -273,6 +276,17 @@ header {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+#resume{
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    background-attachment: scroll;
+    background-image: url(../img/header4.png);
+    background-position: center ;
+    background-repeat: none;
+    background-size: cover;
+
 }
 
 header .intro-text {
