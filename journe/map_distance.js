@@ -21,9 +21,14 @@ var genre = JSON.stringify(valueArray[0])
 var start = JSON.stringify(valueArray[1])
 var dest = JSON.stringify(valueArray[2])
 
+var globalPlaylistID;
+var authorizationSpotify = 'BQBvkZBl0LwXg9EugRIDz4xxT4El3-CBAZ-aR-yvDNdoPT_k7vTmMFOAyiG4j0hnWY_-GIEsf_rzTFA1-0tth4xc0YyNsvYeZW7Es5RGOzWVAxAyaMQHJVjTZ7XPOzZtgOALY415TvlzUfG-BXd-NPlzg58nqwsWR9kqL2MCnoGSP99ufRKm9t7Zizkb_OUr1a2GssyV7bpiDDyUGICZz3A2JugFvMEgY9qn_0Y';
 
+ create_playlist("new journey");
 
+var embedURL = "https://embed.spotify.com/?uri=spotify%3Auser%3Ajourne-makebu%3Aplaylist%3A"; 
 
+var tempArray = new Array(50);
 
 var origin1 = start
 var destinationA = dest
@@ -51,18 +56,18 @@ function calculateDistances() {
       avoidHighways: false,
       avoidTolls: false
     }, callback);
+
 }
 
 function callback(response, status) {
   if (status != google.maps.DistanceMatrixStatus.OK) {
-    alert('Error was: ' + status);
+    //alert('Error was: ' + status);
   } else {
     var origins = response.originAddresses;
     var destinations = response.destinationAddresses;
     var outputDiv = document.getElementById('outputDiv');
     var timeDiv = document.getElementById('time-display');
     var hiddenDiv = document.getElementById('time');
-    alert(hiddenDiv.value)
     outputDiv.innerHTML = '';
     deleteOverlays();
 
@@ -76,11 +81,11 @@ function callback(response, status) {
             + results[j].duration.text + '<br>';
         timeDiv.innerHTML = 'Travel time: ' + results[j].duration.text
         hiddenDiv.value = convertToMS(results[j].duration.text)
-        alert(hiddenDiv.value)
         hiddenDiv.innerHTML = hiddenDiv.value;
-        display_dictionary(genre);
       }
     }
+        display_dictionary(genre);
+
   }
 }
 
@@ -127,28 +132,151 @@ function convertToMS(timeString) {
   }
   return seconds * 1000;
 }
+function createPlaylist(username, name) {
+  console.log('createPlaylist', username, name);
+  var url = 'https://api.spotify.com/v1/users/' + username +
+    '/playlists';
+  $.ajax(url, {
+    method: 'POST',
+    data: JSON.stringify({
+      'name': name,
+      'public': false
+    }),
+    dataType: 'json',
+    headers: {
+      'Authorization': 'Bearer ' + authorizationSpotify,
+      'Content-Type': 'application/json'
+    },
+    success: function(r) {
+      console.log('create playlist response', r);
+      globalPlaylistID = r.id;
+      callback(r.id);
+    },
+    error: function(r) {
+      callback(null);
+    }
+  });
+}
+
+function addTracksToPlaylist(username, playlist, tracks) {
+  console.log('addTracksToPlaylist', username, playlist, tracks);
+  console.log('tracks.join gives me '+ tracks.join(',spotify%3Atrack%3A'));
+  var url = 'https://api.spotify.com/v1/users/' + username + '/playlists/' + playlist +'/tracks?uris=spotify%3Atrack%3A' + tracks.join(',spotify%3Atrack%3A');
+  $.ajax(url, {
+    method: 'POST',
+    data: JSON.stringify(tracks),
+    dataType: 'json',
+    headers: {
+      'Authorization': 'Bearer ' + authorizationSpotify,
+      'Content-Type': 'application/json'
+    },
+    success: function(r) {
+      console.log('add track response', r);
+      callback(r.id);
+console.log('assigning embedURL to ' +globalPlaylistID);
+    embedURL += globalPlaylistID;
+    console.log('so the embedURL is '+ embedURL);
+    document.getElementById("playlist").innerHTML='<iframe src="'+embedURL+'"style="width:490px; height:550px;" frameborder="0" allowtransparency="true"></iframe>';
+    
+    },
+    error: function(r) {
+      callback(null);
+    }
+  });
+}
+function create_playlist(playlistName){
+  console.log('about to call ajax');
+  $.ajax({
+    url: 'https://api.spotify.com/v1/users/journe-makebu/playlists', 
+    method: 'POST',
+    data: JSON.stringify({
+      'name': playlistName,
+      'public': false
+    }),
+    dataType: 'json',
+        contentType: "application/json; charset=utf-8",
+    headers: {
+      'Authorization': 'Bearer ' + authorizationSpotify,
+      'Content-Type': 'application/json'
+    },
+    success: function(r) {
+      console.log('create playlist response', r);
+      console.log('this playlistID is ' + r.id + " for this r creation " + r);
+      globalPlaylistID = r.id;
+    },
+    error: function(r) {
+      console.log('we failed');
+      console.log('for this r creation ' + r);
+    }
+  });console.log('we made the json call');
+}
+
+function add_track(playlistID, trackName){
+  var trackID = trackName;
+  console.log('trackID is ' + trackID);
+  console.log('about to call ajax a second time');
+  $.ajax({
+    url: 'https://api.spotify.com/v1/users/journe-makebu/playlists/' + playlistID + '/tracks?uris=spotify%3Atrack%3A' + encodeURIComponent(trackID),
+    method: 'POST',
+    data: JSON.stringify(trackID),
+    dataType: 'json',
+    contentType: "application/json; charset=utf-8",
+    headers: {
+      'Authorization': 'Bearer ' + authorizationSpotify,
+      'Content-Type': 'application/json'
+    },
+    statusCode: {
+        500: function () {
+            alert('Fail!');
+        }
+    },
+    success: function(r) {
+      console.log('create track response', r);
+      console.log('for this r track success '+ r.id);
+    },
+    error: function(r) {
+      console.log('we failed');
+      console.log('for this r track ' + r.id);
+    }
+  });console.log('we added the track call');
+}
 
 function display_dictionary(genre){
     var myjson;
     var blah = genre;
+    
     $.getJSON("https://api.spotify.com/v1/search?query=track%3A%22" + blah + "%22&offset=0&limit=50&type=track", function(json){
         myjson = json;
         console.log(myjson);
 
     counter = 0;
+    songsAdded = 0;
     iteration = 0;
     tripLength = document.getElementById('time').innerText;
-    for(i = 0; i <50; i++){
+    for(i = 0; i < 100; i++){
         current = Math.floor(Math.random() * 49);
+        console.log('current is ' + current);
         if(counter + myjson.tracks.items[current].duration_ms > tripLength){
-            ;
+            iteration = i;
         }
         else{
+          console.log('adding track to playlistId, ' + globalPlaylistID);
+          tempArray[i] = myjson.tracks.items[current].id;
+          console.log('we just added to the tempArray this element: ' + tempArray[i]);
+          console.log('current song is ' + myjson.tracks.items[current].id + ' with current being ' + current);
             counter += myjson.tracks.items[current].duration_ms;
+            console.log('the counter is ' + counter + ' the duration of the song is ' + myjson.tracks.items[current].duration_ms);
+            songsAdded++;
             iteration = i;
         }
     }
-    console.log("the total song times add up to " + counter + " having gone through " + iteration + " songs when the length of the trip is " + tripLength);
+    var tracksArray = new Array(songsAdded-1);
+    for(i = 0; i < songsAdded-1; i++){
+      tracksArray[i] = tempArray[i];
+      console.log('tracksarray is now ' + tracksArray);
+    }
+    addTracksToPlaylist('journe-makebu', globalPlaylistID, tracksArray);
+    console.log("the total song times add up to " + counter + " having added " + songsAdded + " songs and having gone through " + iteration + " songs when the length of the trip is " + tripLength);
     });
 }
 
