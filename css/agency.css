@@ -280,9 +280,8 @@ header {
 #resume{
     text-align: center;
     color: #fff;
-    background-color: #000;
+    background-color: #f1f1f1;
     background-attachment: scroll;
-    background-image: url(../img/header4.png);
     background-position: center ;
     background-repeat: none;
     background-size: cover;
@@ -343,6 +342,7 @@ section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 40px;
+    color: #000;
 }
 
 section h3.section-subheading {
