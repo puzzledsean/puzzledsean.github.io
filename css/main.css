@@ -1,0 +1,189 @@
+a{
+  color: #F26956;
+}
+
+a:hover{
+  color:#CE4116;
+}
+
+html body{
+ margin:0;
+ padding:0;
+ border:0;
+ outline:0;
+}
+
+header{
+  background-color: #000;
+  background-attachment: scroll;
+  background-image: url(../img/header2.jpg);
+  background-position: center center;
+  background-repeat: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  height:100vmin;
+}
+
+
+/*-----------CSS classes-----------*/
+.pro-pic{
+  float:left;
+  padding-left:10vmin;
+  width:40vmin;
+}
+
+.section-headers{
+  margin:0;
+  padding-left:60vmin;
+  padding-top:5vmin;
+  padding-right:20vmin;
+  font-size:50px;
+  vertical-align: top;
+  line-height: 60px;
+}
+
+.section-headers-text{
+  background-image:url(../img/about.png);
+  background-repeat: no-repeat;
+  color:#fff;
+  padding-left:1vmin; 
+}
+
+.section-info{
+  font-size:20px;
+  line-height: 25px;
+  vertical-align: top;
+  text-transform:initial;
+  padding-top:4vmin;
+}
+
+.scrollToTop{
+  width:100px;
+  height:130px;
+  padding:10px;
+  text-align:center;
+  background:whiteSmoke;
+  font-weight: bold;
+  color:#444;
+  text-decoration: none;
+  position: fixed;
+  top:75px;
+  right:40px;
+  display: none;
+}
+
+.scrollToTop:hover{
+  text-decoration: none;
+}
+
+/*-----------CSS ids-----------*/
+#about, #resume, #projects {
+  padding: 15vmin 0;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  line-height: 50px;
+  text-transform: uppercase;
+  color:#000;
+  height: 75%;
+  width: 100%;
+  overflow: auto;
+}
+
+#footer{
+  padding:5vmin 0;
+  text-align:center;
+  background-color: #fff;
+}
+
+#btn{
+	padding: 20px 29px;
+ background-image: url(../img/button.png);
+ background-size:60px;
+ background-position: center center;
+ background-repeat: none;
+}
+
+#btn:hover {
+	padding: 20px 29px;
+ background-image: url(../img/button_hover.png);
+ background-size:60px;
+ background-position: center center;
+ background-repeat: none;
+}
+
+#container {
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  line-height: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  color:#fff;
+  display: table;
+  position: absolute;
+  height: 75%;
+  width: 100%;
+}
+
+#filler {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#git{
+  background-image: url(../img/git.png);
+  background-size: 40px;
+  padding-left: 41px;
+  padding-bottom: 23px;
+}
+
+#introduction {
+	text-align: center;
+ width: 300px;
+ height:300px;
+ margin: 10px auto;
+ background-color: #000;
+}
+
+#intro-text{
+	font-size:55px;
+	padding:3rem;
+}
+
+#my-picture{
+  max-width:100%;
+  max-height:100%;
+  border-radius: 300px;
+}
+
+#resume{
+  background-color:#EEEDED;
+}
+
+#resume-background{
+  background-image:url(../img/resume.png);
+}
+
+#resume-vector{
+  max-width:100%;
+  max-height:100%;
+}
+#projects-background{
+  background-image: url(../img/projects.png);
+}
+
+#vimeo{
+  background-image: url(../img/vimeo.png);
+  background-size: 40px;
+  padding-left: 43px;
+  padding-bottom: 23px;
+}
+
+
+#youtube{
+  background-image: url(../img/youtube.png);
+  background-size: 55px;
+  padding-left: 52px;
+  padding-bottom: 13px;
+}

@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-
-    <meta charset="utf-8">
+	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -12,95 +10,82 @@
 
     <title>PuzzledSean</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/agency.css" rel="stylesheet">
+    <!--CSS -->
+    <link href="css/main.css" rel="stylesheet">
 
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="/path/to/jquery.easy-pie-chart.js"></script>
-
-<!--<link rel="stylesheet"type="text/css" href="/path/to/jquery.easy-pie-chart.css">
-<script type="text/javascript">
-$(function() {
-    $('.chart').easyPieChart({
-        animate:2000
-    });
-});
-</script>-->
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <h3 class="text-muted" style="color:white">Sean Zhang</h3>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse">
-                
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-heading">Hi. I'm reconsructing this site. Stay tuned!</div>
-            </div>
-        </div>
-    </header>
-
-    </div>
-
-    <!-- jQuery -->
+    <!--jQuery-->
     <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- Custom Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+</head>
+<body>
+    <header id="background-img">
+    	<div id="container">
+         <div id="filler">
+            <div id="introduction">
+                <h1 id="intro-text">Hello World, I'm Sean.</h1>
+            </div>
+            <div id="button-scroll">
+                <a href="#about" class="scroll" id="btn"></a>
+            </div>
+        </div>
 
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    </div>
+</header>
+<div id="about">
+    <div class="pro-pic">
+        <img src="img/swag2.png" alt="profile" id="my-picture">
+    </div>
+    <div class="section-headers">
+        <div class="section-headers-text">About</div>
+        <div class="section-info">
+            I'm a sophomore at Boston University, majoring in Computer Science. I'm currently a Technology Development Intern at 
+            <a href ="https://www.optum.com/">Optum Technology</a>. 
+            <br>
+            <br>
+            Programmer by day, hipster nerd by night. In my free time, I like to explore the internet, make videos, and play Smash brothers. 
+            <br>
+            <br>
+            I also like making things look pretty.
+        </div>
+    </div>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/agency.js"></script>
+</div>
+<div id="resume">
+    <div class="pro-pic">
+        <img src="img/resumeVector.png" alt="profile" id="resume-vector">
+    </div>
+    <div class="section-headers">
+        <div class="section-headers-text" id="resume-background">Resume</div>
+        <div class="section-info">
+            I'm working to become a better individual day by day!
+            <br>
+            Check out my progress by downloading it <a href="resume.pdf">here</a>. 
+        </div>
+    </div>
 
+</div><!--
+<div id="projects">
+    <div class="section-headers">
+        <div class="section-headers-text" id="projects-background">Projects</div>
+        <div class="section-info">
+            Working on adding these to the site! In the meantime, check out my <a href="https://www.github.com/puzzledsean">Github</a>. 
+        </div>
+    </div>
+
+</div>
+-->
+<div id="footer">
+    <a href="https://www.github.com/puzzledsean" id="git"></a>
+    <a href="https://www.youtube.com/puzzledsean" id="youtube"></a>
+    <a href="https://www.vimeo.com/puzzledsean" id="vimeo"></a>
+
+</div>
 </body>
+
 
 </html>
