@@ -1,91 +1,44 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!--<link rel="icon" href="img/favicon.ico">-->
+    <title>Sean Zhang</title>
 
-    <title>PuzzledSean</title>
+    <!-- CSS stuff -->
+    <link rel="stylesheet" href="css/app.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/hover.css" rel="stylesheet">
 
-    <!--CSS -->
-    <link href="css/main.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
 
-
-    <!--jQuery-->
-    <script src="js/jquery.js"></script>
-
-    <!-- Custom Fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <script src="js/main.js" type="text/javascript"></script>
-</head>
-<body>
+    <!--HEADER-->
     <header id="background-img">
-    	<div id="container">
-         <div id="filler">
-            <div id="introduction">
-                <h1 id="intro-text">Hello World, I'm Sean.</h1>
-            </div>
-            <div id="button-scroll">
-                <a href="#about" class="scroll" id="btn"></a>
-            </div>
+      <div id="title">
+        <div class="fade-in title intro-text">
+          Hello, I'm Sean
         </div>
-
-    </div>
-</header>
-<div id="about">
-    <div class="pro-pic">
-        <img src="img/hackMIT-crop.png" alt="profile" id="my-picture">
-    </div>
-    <div class="section-headers">
-        <div class="section-headers-text">About</div>
-        <div class="section-info">
-            I'm a sophomore at Boston University, majoring in Computer Science. This past summer, I was a Software Development Intern at 
-            <a href ="https://www.optum.com/" target="_blank">Optum Technology</a>. 
-            <br>
-            <br>
-            In my free time, I like to explore the internet, make <a href ="https://www.youtube.com/puzzledsean" target="_blank">videos</a>, and play Smash brothers. 
-            <br>
-            <br>
-            <p style="display:inline">I also like making things look pretty. <p style="font-size:1vmin;display:inline">(Or try to, at least)</p></p>
+        <div id="options">
+            <a class="fade-in one button hvr-grow" id="item" href="about.html">About</a>
+            <a class="fade-in two button hvr-grow" id="item" href="projects.html">Projects</a>
+            <a class="fade-in three button hvr-grow" id="item" href="resume.pdf" target="_blank">Resume</a>
         </div>
-    </div>
+      </div>
 
-</div>
-<div id="resume">
-    <div class="pro-pic">
-        <img src="img/resumeVector.png" alt="profile" id="resume-vector">
-    </div>
-    <div class="section-headers">
-        <div class="section-headers-text" id="resume-background">Resume</div>
-        <div class="section-info">
-            I'm working to become a better individual day by day!
-            <br>
-            Check out my progress by downloading it <a href="updatedResume.pdf" target="_blank">here</a>. 
-        </div>
-    </div>
+    </header>
 
-</div><!--
-<div id="projects">
-    <div class="section-headers">
-        <div class="section-headers-text" id="projects-background">Projects</div>
-        <div class="section-info">
-            Working on adding these to the site! In the meantime, check out my <a href="https://www.github.com/puzzledsean">Github</a>. 
-        </div>
-    </div>
-test
-</div>
--->
-<div id="footer">
-    <a href="https://www.github.com/puzzledsean" id="git" target="_blank"></a>
-    <a href="https://www.youtube.com/puzzledsean" id="youtube" target="_blank"></a>
-    <a href="https://www.vimeo.com/puzzledsean" id="vimeo" target="_blank"></a>
-
-</div>
-</body>
-
-
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
