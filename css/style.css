@@ -5,6 +5,7 @@ html body {
 	padding:0;
 	border:0;
 	outline:0;
+	height:100%;
 }
 
 a:hover{
@@ -23,6 +24,8 @@ header {
   background-size: cover;
   -o-background-size: cover;
   height:100vmin;
+  width:;
+  position: relative;
  }
 
 

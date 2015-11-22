@@ -1388,14 +1388,15 @@ pre code {
   overflow-y: scroll;
 }
 .container {
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    height: 50%;
-    position: relative;
-    top: 35%;
-    transform: translateY(-50%);
+  min-height: 90%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 90vh; /* These two lines are counted as one :-)       */
+  align-items: center;
+  -webkit-align-items: center;
+  -webkit-justify-content:center;
+  display: -webkit-flex;
+  display: flex;
+
+  margin: auto;
 }
 @media (min-width: 768px) {
   .container {
