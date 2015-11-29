@@ -101,7 +101,7 @@ header {
 	top:45%;
 	color:#fff; 
 	text-align: center;
-	font-family: HelveticaNeue-Light;
+	font-family: HelveticaNeue-Light, sans-serif;
 	font-size: 50px;
 }
 
@@ -111,7 +111,7 @@ header {
  	padding-top:.5em;
 	color:#fff; 
 	text-align: center;
-	font-family: HelveticaNeue-Light;
+	font-family: HelveticaNeue-Light, sans-serif;
 	font-size: 25px;
 }
 
