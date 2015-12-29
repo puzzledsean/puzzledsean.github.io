@@ -1,69 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <title>Projects</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+  <title>Projects</title>
 
-    <!-- CSS stuff -->
-    <link rel="stylesheet" href="css/app.css">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="css/hover.css" rel="stylesheet">
+  <!-- CSS stuff -->
+  <link rel="stylesheet" href="css/app.css">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="css/hover.css" rel="stylesheet">
+  <link href="css/3-col-portfolio.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+      <![endif]-->
+    </head>
+    <body>
 
-    <!--HEADER-->
-    <header>
-      <div id="options">
-            <a class="fade-in one button hvr-grow-shadow" id="item-nav" href="index.html">Home</a>
-            <a class="fade-in two button hvr-grow-shadow" id="item-nav" href="about.html">About</a>
-            <a class="fade-in three button hvr-grow-shadow" id="item-nav" href="resume.pdf" target="_blank">Resume</a>
+      <!--HEADER-->
+      <header>
+        <div id="options">
+              <a class="fade-in one button hvr-grow-shadow" id="item-nav" href="index.html">Home</a>
+              <a class="fade-in one button hvr-grow-shadow" id="item-nav" href="about.html">About</a>
+              <a class="fade-in two button hvr-grow-shadow" id="item-nav" href="projects.html">Projects</a>
+              <a class="fade-in three button hvr-grow-shadow" id="item-nav" href="resume.pdf" target="_blank">Resume</a>
         </div>
-      <div class="container">
-        <div class="jumbotron fade-in fast">
-        <div class="row display-cell">
-          <h2 style="color:#000" class="intro-text">Projects</h2>
-                <div class="col-lg-12">
-                    <div class="row">
-                        <h3>
-                          Work in progress on prettying this up.
-                          <br>
-                          In the mean time, check out my <a id="project-links" href="https://www.github.com/puzzledsean" target="_blank">Github</a> and 
-                          <a id="project-links" href="http://devpost.com/puzzledsean?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" id="git" target="_blank">Devpost</a>
-                          to see what I'm working on!
-                          <br><br>
-                          Some cool stuff:
-                          <br><br>
-                          <a id="project-links" href="https://github.com/puzzledsean/HackHarvard" target="_blank">AssassinSpoons</a>
-                          <br>
-                          My team and I built an Android app called AssassinSpoons at HackHarvard 2015. It pairs with the Microsoft Band to complement users' gameplay of Assassins by using GPS to track locations in real time of enemy's whereabouts. 
-                          <br><br>
-                          <a id="project-links" href="https://play.google.com/store/apps/details?id=sean.bostonhacks" target="_blank">BostonHacks Android App</a>
-                          <br>
-                          I recently pushed my first Android app onto the Google Play Store with the team at Open Web!
-                        </h3>
-                    </div>
+        <div class="container" id="project-container">
+          <div class="jumbotron fade-in fast">
+            <div class="row display-cell">
+              <h2 style="color:#000" class="intro-text">Projects</h2>
+              <div class="col-lg-12">
+                <div class="row">
+                  <h3>
+                    Check out my <a id="project-links" href="https://www.github.com/puzzledsean" target="_blank">Github</a> and 
+                    <a id="project-links" href="http://devpost.com/puzzledsean?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" id="git" target="_blank">Devpost</a>
+                    to see what I'm working on!
+                    <br><br>
+                  </h3>
+                </div>
+              </div>     
+              <!-- Projects Row -->
+              <div class="row">
+                <div class="col-md-4 portfolio-item">
+                  <a href="http://devpost.com/software/assassinspoons" target="_blank">
+                    <img class="img-responsive" src="img/band.jpg" alt="">
+                  </a>
+                  <h3>
+                    <a id="project-links" href="http://devpost.com/software/assassinspoons" target="_blank">Assassin Spoons</a>
+                  </h3>
+                  <p id="project-description">My team and I built an Android app called AssassinSpoons, an app that complements user's gampleay of the popular game, Assassins. Our app pairs with the Microsoft Band and uses GPS to track locations in real time of a target/enemy's whereabouts. Built with Google Maps API/Microsoft Band/Parse at HackHarvard 2015.</p>
+                </div>
+                <div class="col-md-4 portfolio-item">
+                  <a href="https://play.google.com/store/apps/details?id=sean.bostonhacks" target="_blank">
+                    <img class="img-responsive" src="img/BostonHacks.jpg" alt="">
+                  </a>
+                  <h3>
+                    <a id="project-links" href="https://play.google.com/store/apps/details?id=sean.bostonhacks" target="_blank">BostonHacks 2015</a>
+                  </h3>
+                  <p id="project-description">I recently pushed my first Android app onto the Google Play Store with the team at Open Web. Our app helps attendees stay up to date by providing schedules, maps, contact information, and push notifications.</p>
+                </div>
+                <div class="col-md-4 portfolio-item">
+                  <a href="http://devpost.com/software/journe-fqgkb" target="_blank">
+                    <img class="img-responsive" src="img/journE.png" alt="">
+                  </a>
+                  <h3>
+                    <a id="project-links" href="http://devpost.com/software/journe-fqgkb" target="_blank">JournE</a>
+                  </h3>
+                  <p id="project-description">My team and I developed a web application that creates Spotify playlists based on the length of a given road trip. You'll never have to leave the car in the middle of your favorite song! Built with Spotify/Google Maps API at MakeBU 2015.</p>
+                </div>
               </div>
-          </div>  
-      </div>
+              <!-- /.row -->
+
+              <!-- Projects Row -->
+              <div class="row">
+                <div class="col-md-4 portfolio-item">
+                  <a href="http://devpost.com/software/crossgif-x2tg" target="_blank">
+                    <img class="img-responsive" src="img/crossgif.png" alt="">
+                  </a>
+                  <h3>
+                    <a id="project-links" href="http://devpost.com/software/crossgif-x2tg" target="_blank">CrossGif</a>
+                  </h3>
+                  <p id="project-description">My team and I built a fun, web-based madlibs spinoff game, where users had to fill in the blank, given a representational gif of the word. Users have to correctly guess as many phrases as they can within 30 seconds. Built with Giphy's API at HackNY 2015.</p>
+                </div>
+                
+              </div>
+              <!-- /.row -->
+        </div>
+      </div>  
+    </div>
 
 
-                  
+
   </div>
-    </header>
+</header>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+</body>
 </html>

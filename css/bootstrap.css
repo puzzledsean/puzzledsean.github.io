@@ -4630,6 +4630,7 @@ a.badge:focus {
   color: inherit;
   background-color: #eee;
   box-shadow: 5px 5px 5px #323232;
+  width:100%;
 }
 .jumbotron h1,
 .jumbotron .h1 {

@@ -17,14 +17,12 @@ header {
 	background-color: #323232;
   background-attachment: fixed;
   background-position: center center;
-  background-repeat: none;
+  background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  height:100vh;
-  width:100vmax;
- }
+}
 
 /*-------------CLASSES----------------*/
 .intro-text{
@@ -69,6 +67,10 @@ header {
   right:0;
 }
 
+#background-img{
+	height:100vmin;
+}
+
 #item{
 	padding-left: 10px;
 	padding-right: 10px;
@@ -109,13 +111,20 @@ header {
 	width:500px;
  	margin:0 auto;
  	padding-top:.5em;
+ 	padding-bottom: .5em;
 	color:#fff; 
 	text-align: center;
 	font-family: HelveticaNeue-Light, sans-serif;
 	font-size: 25px;
 }
 
+#project-description{
+	font-size:16px;
+}
 
+#project-container{
+	margin-top:5em;
+}
 
 #videos{
 	color: #e52d27;
