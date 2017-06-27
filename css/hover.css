@@ -2432,8 +2432,8 @@
   left: 0;
   right: 100%;
   bottom: 0;
-  background: #2098d1;
-  height: 4px;
+  background: #0a0a0a;
+  height: 2px;
   -webkit-transition-property: right;
   transition-property: right;
   -webkit-transition-duration: 0.3s;
@@ -2465,8 +2465,8 @@
   left: 50%;
   right: 50%;
   bottom: 0;
-  background: #2098d1;
-  height: 4px;
+  background: #0a0a0a;
+  height: 2px;
   -webkit-transition-property: left, right;
   transition-property: left, right;
   -webkit-transition-duration: 0.3s;
