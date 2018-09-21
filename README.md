@@ -2,4 +2,4 @@
 
 My personal site!
 
-[http://puzzledsean.com](http://puzzledsean.com)
+[https://puzzledsean.com](https://puzzledsean.com)
